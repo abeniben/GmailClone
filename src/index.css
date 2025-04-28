@@ -1,0 +1,218 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark body {
+    @apply bg-gmail-dark-bg text-gmail-lightGray;
+  }
+
+  .dark .gmail-email-row {
+    @apply bg-gmail-dark-card border-gmail-dark-border text-gmail-lightGray;
+  }
+  .dark .gmail-email-row.unread {
+    @apply bg-gmail-dark-unread font-semibold;
+  }
+  .dark .gmail-email-row.read {
+    @apply bg-gmail-dark-read;
+  }
+  .dark .gmail-email-row.selected {
+    @apply bg-gmail-dark-selected;
+  }
+  .dark .gmail-sidebar-item {
+    @apply text-gmail-lightGray hover:bg-gmail-dark-hover;
+  }
+  .dark .gmail-sidebar-item.active {
+    @apply bg-gmail-dark-selected text-gmail-blue;
+  }
+  .dark .gmail-tab {
+    @apply text-gmail-lightGray;
+  }
+  .dark .gmail-tab.active {
+    @apply text-gmail-blue border-gmail-blue;
+  }
+  .dark .gmail-search-bar {
+    @apply bg-gmail-dark-card text-gmail-lightGray;
+  }
+  .dark .gmail-compose-modal {
+    @apply bg-gmail-dark-card text-gmail-lightGray;
+  }
+  .dark .gmail-icon-button {
+    @apply text-gmail-lightGray hover:bg-gmail-dark-hover;
+  }
+  .dark .gmail-chip {
+    @apply bg-gmail-dark-hover text-gmail-lightGray;
+  }
+  .dark .gmail-skeleton {
+    @apply bg-gray-800;
+  }
+  .dark .gmail-density-comfortable,
+  .dark .gmail-density-cozy,
+  .dark .gmail-density-compact {
+    @apply bg-transparent;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gmail-background text-foreground;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  }
+  
+  /* Gmail specific styles */
+  .gmail-compose-button {
+    @apply text-gray-800 dark:text-white font-medium px-6 py-4 rounded-2xl shadow-md bg-white dark:bg-gmail-dark-card hover:shadow-lg transition-shadow duration-200 flex items-center justify-start;
+  }
+  
+  .gmail-sidebar-item {
+    @apply flex items-center px-6 py-2 text-sm font-medium text-gmail-gray rounded-r-full hover:bg-gmail-hover transition-colors duration-150;
+  }
+  
+  .gmail-sidebar-item.active {
+    @apply bg-gmail-selected text-gmail-blue font-medium;
+  }
+  
+  .gmail-tab {
+    @apply text-sm font-medium text-gmail-gray border-b-2 border-transparent px-4 py-3 transition-colors duration-150;
+  }
+  
+  .gmail-tab.active {
+    @apply text-gmail-blue border-gmail-blue;
+  }
+  
+  .gmail-email-row {
+    @apply border-b border-gmail-border hover:shadow-sm transition-all duration-150 cursor-pointer;
+  }
+  
+  .gmail-email-row.unread {
+    @apply bg-gmail-unread font-medium;
+  }
+  
+  .gmail-email-row.read {
+    @apply bg-gmail-read;
+  }
+  
+  .gmail-email-row.selected {
+    @apply bg-gmail-selected;
+  }
+  
+  /* Density settings classes */
+  .gmail-density-comfortable {
+    @apply py-3;
+  }
+  
+  .gmail-density-cozy {
+    @apply py-2;
+  }
+  
+  .gmail-density-compact {
+    @apply py-1;
+  }
+}
+
+@layer components {
+  .gmail-icon-button {
+    @apply p-2 rounded-full hover:bg-gmail-hover dark:hover:bg-gmail-dark-hover text-gmail-gray transition-colors duration-150;
+  }
+  
+  .gmail-chip {
+    @apply inline-flex items-center px-3 py-1 bg-gmail-lightGray text-gmail-gray text-xs rounded-full mr-2;
+  }
+  
+  .gmail-compose-modal {
+    @apply fixed bottom-0 right-12 w-[500px] bg-white dark:bg-gmail-dark-card rounded-t-lg shadow-2xl overflow-hidden z-50;
+  }
+  
+  .gmail-search-bar {
+    @apply bg-gmail-lightGray dark:bg-gmail-dark-card rounded-full px-4 py-2 flex items-center gap-2 hover:bg-white dark:hover:bg-gmail-dark-hover hover:shadow-md transition-all duration-200;
+  }
+}
+
+/* Gmail Skeleton Loaders */
+.gmail-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
