@@ -23,7 +23,10 @@ cd GmailClone
 npm install
 npm run dev
 
-🔗 [Live Demo](https://gmailclone.vercel.app)  
+🔗 [Live Demo]
+
+Check out the live version here: [Gmail Clone](https://gmail-ui.netlify.app)
+
 📜 MIT License  
 
 *Built for fun to practice React & UI design*  
