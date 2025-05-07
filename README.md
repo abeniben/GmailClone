@@ -23,7 +23,7 @@ cd GmailClone
 npm install
 npm run dev
 
-🔗 [Live Demo]
+## 🔗 [Live Demo]
 
 Check out the live version here: [Gmail Clone](https://gmail-ui.netlify.app)
 
