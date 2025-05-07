@@ -19,7 +19,7 @@ A lightweight **frontend-only** clone of Gmail's interface with mock data.
 ## ⚡ Quick Start
 ```bash
 git clone https://github.com/abeniben/Gmail-Clone.git
-cd gmail-clone
+cd GmailClone
 npm install
 npm run dev
 
