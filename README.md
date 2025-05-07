@@ -17,11 +17,11 @@ A lightweight **frontend-only** clone of Gmail's interface with mock data.
 - Context API (state)  
 
 ## ⚡ Quick Start
-```bash
-git clone https://github.com/abeniben/Gmail-Clone.git
-cd GmailClone
-npm install
-npm run dev
+  ```bash
+  git clone https://github.com/abeniben/Gmail-Clone.git
+  cd GmailClone
+  npm install
+  npm run dev
 
 ## 🔗 [Live Demo]
 
